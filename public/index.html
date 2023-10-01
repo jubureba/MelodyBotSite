@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MelodyBot - O Melhor Bot de Música para Discord</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset de estilos para garantir uma base limpa */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Alteração no CSS para alinhar o texto com os links do cabeçalho */
+header {
+    display: flex;
+    flex-direction: column; /* Alterar para uma coluna para alinhar verticalmente */
+    align-items: center; /* Centralizar verticalmente os elementos */
+    background: #20232A;
+    color: #61DAFB;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-top: 0.5rem; /* Reduzir o espaço superior */
+    color: #61DAFB;
+    position: relative;
+    order: 2; /* Alterar a ordem para que o texto apareça abaixo dos links */
+}
+
+
+        /* Estilos para os botões */
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #61DAFB; /* Cor do texto dos botões (azul claro) */
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #FF9900; /* Cor de destaque ao passar o mouse (laranja) */
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-top: 1rem;
+            color: #61DAFB; /* Cor do título principal (azul claro) */
+            position: relative;
+        }
+
+        /* Estilos para o logotipo */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 40px; /* Largura do logotipo */
+            height: 40px; /* Altura do logotipo */
+            margin-right: 10px; /* Espaçamento à direita do logotipo */
+            animation: bounce 2s infinite; /* Animação de salto */
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9); /* Efeito de vidro */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .commands, .about, .contact {
+            background: rgba(255, 255, 255, 0.9); /* Efeito de vidro */
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .commands h2, .about h2, .contact h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #61DAFB; /* Cor do título secundário (azul claro) */
+        }
+
+        .command {
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .command-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #61DAFB; /* Cor do nome do comando (azul claro) */
+        }
+
+        .command-description {
+            margin-top: 0.5rem;
+            color: #666; /* Cor da descrição do comando (cinza escuro) */
+        }
+
+        .command-options {
+            margin-top: 1rem;
+        }
+
+        .option {
+            background-color: #61DAFB; /* Cor de fundo das opções (azul claro) */
+            color: #fff; /* Cor do texto das opções (branco) */
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            margin-right: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #20232A; /* Cor de fundo do rodapé (cinza escuro) */
+            color: #61DAFB; /* Cor do texto do rodapé (azul claro) */
+            margin-top: 2rem;
+            backdrop-filter: blur(10px); /* Efeito de vidro */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="MelodyBot Logo">
+            <h1>MelodyBot - O Melhor Bot de Música para Discord</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#commands">Comandos</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="about">
+            <h2>Sobre o Bot</h2>
+            <p>Seu Bot de Música é um bot incrível que reproduz músicas diretamente do YouTube. Estamos trabalhando constantemente para implementar recursos adicionais, como suporte para serviços de streaming como o Spotify. Nossa missão é fornecer a melhor experiência musical para os usuários do Discord.</p>
+            <a href="#" class="download-button">Download</a>
+        </section>
+
+        <section id="commands">
+            <h2>Comandos</h2>
+            <div class="command">
+                <h3>?play</h3>
+                <p>Use este comando para tocar uma música do YouTube. Por exemplo: <code>?play nome da música</code></p>
+            </div>
+            <div class="command">
+                <h3>?skip</h3>
+                <p>Use este comando para pular a música atualmente em reprodução. Por exemplo: <code>?skip</code></p>
+            </div>
+            <div class="command">
+                <h3>?stop</h3>
+                <p>Use este comando para parar a reprodução atual e limpar a fila de reprodução. Por exemplo: <code>?stop</code></p>
+            </div>
+            <!-- Adicione mais comandos aqui -->
+        </section>
+        
+        <section id="contact">
+            <h2>Contato</h2>
+            <p>Para obter mais informações ou entrar em contato conosco, envie um e-mail para: <a href="mailto:eng.thiagolima@hotmail.com">eng.thiagolima@hotmail.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2023 MelodyBot - O Melhor Bot de Música para Discord
+    </footer>
+</body>
+</html>

@@ -1,0 +1,177 @@
+/* Reset de estilos para garantir uma base limpa */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3; /* Cor de fundo principal */
+    color: #333; /* Cor do texto principal */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333; /* Cor de fundo do cabeçalho */
+    color: #fff; /* Cor do texto do cabeçalho */
+    text-align: center;
+    padding: 1rem 0;
+    backdrop-filter: blur(10px); /* Efeito de vidro */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff9900; /* Cor de destaque ao passar o mouse */
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: #333; /* Cor do título principal */
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9); /* Efeito de vidro */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.commands, .about, .contact {
+    background: rgba(255, 255, 255, 0.9); /* Efeito de vidro */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.commands h2, .about h2, .contact h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333; /* Cor do título secundário */
+}
+
+.command {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+.command-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333; /* Cor do nome do comando */
+}
+
+.command-description {
+    margin-top: 0.5rem;
+    color: #666; /* Cor da descrição do comando */
+}
+
+.command-options {
+    margin-top: 1rem;
+}
+
+.option {
+    background-color: #333; /* Cor de fundo das opções */
+    color: #fff; /* Cor do texto das opções */
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    font-size: 0.875rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto do rodapé */
+    margin-top: 2rem;
+    backdrop-filter: blur(10px); /* Efeito de vidro */
+}
+
+/* Estilos para o botão de download */
+.download-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #61DAFB; /* Cor de fundo do botão (azul claro) */
+    color: #fff; /* Cor do texto do botão (branco) */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px; /* Borda circular */
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.download-button:hover {
+    background-color: #20232A; /* Cor de destaque ao passar o mouse (preto) */
+}
+
+/* Efeito de clique */
+.download-button:after {
+    content: "";
+    background: #fff; /* Cor do efeito de clique (branco) */
+    height: 0;
+    width: 120%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    transition: width 0.3s ease, height 0.3s ease;
+    z-index: -1;
+}
+
+.download-button:hover:after {
+    height: 100%;
+    width: 100%;
+}
+
+/* Efeito de sombra */
+.download-button:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.2); /* Cor da sombra */
+    height: 150%;
+    width: 150%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.download-button:hover:before {
+    opacity: 1;
+}
